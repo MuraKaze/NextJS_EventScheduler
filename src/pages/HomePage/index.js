@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import Calendar from '../../components/Calendar';
 import Modal from '../../components/Modal';
 import './styles.css';
-import prisma from "generated/prisma";
 
-const posts = await prisma.Event.findMany();
 function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,7 +25,7 @@ function HomePage() {
           <Calendar />
         </Modal>
       )}
-      {}
+      
       {/* Rows for displaying scheduled events */}
       {/* This part can be added later when events are implemented */}
     </div>
