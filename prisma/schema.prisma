@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id             Int       @id @default(autoincrement())
+  title          String    @db.VarChar(20)
+  description    String    @db.VarChar(200)
+  date           DateTime
+  date_created   DateTime  @default(now())
+  date_modified  DateTime  @updatedAt
+}

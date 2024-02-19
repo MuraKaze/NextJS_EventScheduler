@@ -1,0 +1,28 @@
+/* styles.css */
+
+.container {
+  text-align: center; /* Match App.css */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: calc(10px + 2vmin); /* Match App.css */
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: calc(10px + 2vmin); /* Match App.css */
+  background-color: #0A2472; /* Match App.css */
+  color: white; /* Match App.css */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #61dafb; /* Match App.css */
+}
