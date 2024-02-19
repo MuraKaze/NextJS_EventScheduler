@@ -27,7 +27,7 @@ function HomePage() {
           <Calendar />
         </Modal>
       )}
-
+      {}
       {/* Rows for displaying scheduled events */}
       {/* This part can be added later when events are implemented */}
     </div>
