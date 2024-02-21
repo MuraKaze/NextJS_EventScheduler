@@ -1,17 +1,18 @@
-import React, { Children, useState } from 'react';
-import './styles.css';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import './styles.css'
 
 const Modal = ({ children, onClose }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
 
   const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-  };
+    setTitle(e.target.value)
+  }
 
   const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-  };
+    setDescription(e.target.value)
+  }
 
   return (
     <div className="modal-background" onClick={onClose}>
@@ -30,10 +31,17 @@ const Modal = ({ children, onClose }) => {
           className="modal-textarea"
         />
         {children}
-        <button className="modal-close" onClick={onClose}>Close</button>
+        <button className="modal-close" onClick={onClose}>
+          Close
+        </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClose: PropTypes.func.isRequired
+}
+
+export default Modal
